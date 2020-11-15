@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
     {
         Box domain(IntVect(0), IntVect(63));
         BoxArray ba(domain);
-        ba.maxSize(IntVect(32,16,32));
+        ba.maxSize(IntVect(AMREX_D_DECL(32,16,32)));
         DistributionMapping dm(ba);
 
         iMultiFab mf(ba, dm, 3, 2);
